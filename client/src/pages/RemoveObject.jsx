@@ -36,6 +36,7 @@ const RemoveObject = () => {
           headers: {
             Authorization: `Bearer ${await getToken()}`, // Get the token from Clerk
           },
+          withCredentials: true,
         }
       );
 

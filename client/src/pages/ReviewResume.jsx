@@ -27,6 +27,7 @@ const ReviewResume = () => {
         headers: {
           Authorization: `Bearer ${await getToken()}`, // Get the token from Clerk
         },
+        withCredentials: true
       });
 
       if (data.success) {

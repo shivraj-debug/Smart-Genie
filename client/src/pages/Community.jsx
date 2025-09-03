@@ -60,6 +60,7 @@ const Community = () => {
         headers: {
           Authorization: `Bearer ${await getToken()}`,
         },
+         withCredentials: true, 
       }
     );
 
