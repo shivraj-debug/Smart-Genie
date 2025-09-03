@@ -13,7 +13,13 @@ await connectCloudinary();
 
 const PORT = process.env.PORT || 3000;
 
-app.use(cors());
+// app.use(cors());
+app.use(cors({
+  origin: "https://smart-genie-gamma.vercel.app",  // frontend URL
+  methods: ["GET", "POST", "PUT", "DELETE"],
+  credentials: true
+}));
+
 app.use(express.json());
 app.use(clerkMiddleware());
 app.use(express.urlencoded({ extended:false }));
